@@ -236,9 +236,9 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: min(820px, 92vw);
+  width: min(700px, 88vw);
   margin: 0 auto 2rem;
-  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.4));
+  filter: drop-shadow(0 2px 20px rgba(0,0,0,0.55));
 }
 
 .hero-sub {
