@@ -69,10 +69,10 @@ ul { list-style: none; }
 .btn:active { transform: translateY(0); }
 
 .btn-primary {
-  background: var(--amber);
-  color: var(--charcoal);
+  background: #111111;
+  color: #ffffff;
 }
-.btn-primary:hover { background: var(--amber-dark); color: #fff; }
+.btn-primary:hover { background: #333333; color: #fff; }
 
 .btn-outline {
   background: transparent;
@@ -193,7 +193,7 @@ ul { list-style: none; }
    ═══════════════════════════════════════ */
 .hero {
   position: relative;
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   background:
@@ -213,17 +213,19 @@ ul { list-style: none; }
 
 .hero-content {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 4rem 1rem;
 }
 
 .hero-eyebrow {
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--amber);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
   margin-bottom: 1rem;
 }
 
@@ -236,7 +238,7 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: min(960px, 95vw);
+  width: min(1100px, 98vw);
   margin: 0 auto 2rem;
   filter: drop-shadow(0 2px 24px rgba(0,0,0,0.5));
 }
