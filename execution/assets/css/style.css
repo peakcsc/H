@@ -196,27 +196,38 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background:
-    linear-gradient(135deg, rgba(26,107,138,0.25) 0%, rgba(28,43,51,0.35) 100%),
-    url('../images/hero-bg.jpg') center/cover no-repeat;
-  background-color: var(--teal);
+  background-color: #0c1f28;
   color: #fff;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Full-bleed looping video */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.15));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.52) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
-  max-width: 1200px;
+  z-index: 2;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 2rem 1.5rem;
 }
 
 .hero-eyebrow {
@@ -238,9 +249,9 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: min(620px, 86vw);
-  margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 2px 24px rgba(0,0,0,0.5));
+  width: min(380px, 72vw);
+  margin: 0 auto 1rem;
+  filter: drop-shadow(0 2px 24px rgba(0,0,0,0.7));
 }
 
 .hero-headline {
@@ -279,11 +290,47 @@ ul { list-style: none; }
   opacity: 0.92;
 }
 
-.btn-hero {
-  font-size: 1.15rem;
-  padding: 1.1rem 2.5rem;
-  margin-bottom: 0.5rem;
+/* Dual hero CTA row */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
+
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--amber);
+  color: var(--charcoal);
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 1.15rem 2.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+  box-shadow: 0 6px 28px rgba(245,166,35,0.45);
+}
+.btn-hero-primary:hover { background: #e09610; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,166,35,0.5); }
+
+.btn-hero-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.14);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  padding: 1.15rem 2.75rem;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  transition: transform 0.15s, background 0.15s;
+}
+.btn-hero-call:hover { background: rgba(255,255,255,0.24); transform: translateY(-2px); color: #fff; }
 
 .trust-badges {
   display: flex;
@@ -1015,6 +1062,7 @@ ul { list-style: none; }
   .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
   .section-sub { font-size: 0.95rem; }
   .hero-headline { font-size: clamp(1.35rem, 6vw, 1.9rem); }
+  .btn-hero-primary, .btn-hero-call { width: 100%; justify-content: center; font-size: 1.05rem; padding: 1rem 1.5rem; }
   .pricing-grid { grid-template-columns: 1fr; }
   .price-fortress { order: -1; }
   .form-row { grid-template-columns: 1fr; }
