@@ -180,26 +180,17 @@
   <section class="section gallery-section" id="gallery">
     <div class="container">
       <p class="section-eyebrow">Our Work</p>
-      <h2 class="section-title">Project Gallery</h2>
-      <p class="section-sub">Real projects. Real South Florida homes. Tap any photo to view full size.</p>
-      <div class="gallery-grid" id="galleryGrid">
-        <img src="assets/images/hero-bg.jpg" alt="Pool enclosure installed by Native Screens in South Florida" onclick="openLightbox(this)" loading="lazy" />
-        <div class="gallery-placeholder" onclick="openLightbox(this)">
-          <span>🏠 Screen Enclosure</span><p>Upload your next photo here</p>
-        </div>
-        <div class="gallery-placeholder" onclick="openLightbox(this)">
-          <span>🔧 Rescreen</span><p>Upload your next photo here</p>
-        </div>
-        <div class="gallery-placeholder" onclick="openLightbox(this)">
-          <span>🏗️ Aluminum Roof</span><p>Upload your next photo here</p>
-        </div>
-        <div class="gallery-placeholder" onclick="openLightbox(this)">
-          <span>🌧️ Super Gutter</span><p>Upload your next photo here</p>
-        </div>
-        <div class="gallery-placeholder" onclick="openLightbox(this)">
-          <span>🏊 Pool Enclosure</span><p>Upload your next photo here</p>
-        </div>
+      <h2 class="section-title">Browse Our Projects</h2>
+      <p class="section-sub">Real projects. Real South Florida homes. Hover to explore — tap any photo to view full size.</p>
+
+      <!-- Desktop: 3D overlapping cards -->
+      <div class="portfolio-desktop" id="portfolioDesktop"></div>
+
+      <!-- Mobile: auto-scroll marquee -->
+      <div class="portfolio-mobile">
+        <div class="marquee-track" id="marqueeTrack"></div>
       </div>
+
       <p class="gallery-note">See more of our work on <a href="#" target="_blank" rel="noopener">Facebook</a> and <a href="#" target="_blank" rel="noopener">Instagram</a></p>
     </div>
   </section>
