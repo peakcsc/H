@@ -34,6 +34,10 @@ const galleryImages = [
     alt: 'Pool enclosure by Native Screens — South Florida' },
   { src: 'assets/images/hero-bg.jpg',
     alt: 'Screen enclosure project by Native Screens — Broward County' },
+  { src: 'assets/images/gallery-pool-3.jpg',
+    alt: 'Luxury pool enclosure — Native Screens' },
+  { src: 'assets/images/gallery-pool-4.jpg',
+    alt: 'Pool enclosure with fire pit — Native Screens' },
 ];
 
 function buildSlider() {
