@@ -38,6 +38,8 @@ const galleryImages = [
     alt: 'Luxury pool enclosure — Native Screens' },
   { src: 'assets/images/gallery-pool-4.jpg',
     alt: 'Pool enclosure with fire pit — Native Screens' },
+  { src: 'assets/images/gallery-pool-5.jpg',
+    alt: 'Screen enclosure — Native Screens South Florida' },
 ];
 
 function buildSlider() {
