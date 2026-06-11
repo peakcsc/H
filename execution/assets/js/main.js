@@ -3,6 +3,15 @@
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Hero video — 2× speed, works on iOS (must set after loadedmetadata)
+const heroVideo = document.getElementById('heroVideo');
+if (heroVideo) {
+  const setSpeed = () => { heroVideo.playbackRate = 2.0; };
+  heroVideo.addEventListener('loadedmetadata', setSpeed);
+  heroVideo.addEventListener('play', setSpeed);
+  setSpeed();
+}
+
 // Mobile nav toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
