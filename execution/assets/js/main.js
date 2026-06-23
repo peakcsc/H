@@ -123,12 +123,9 @@ async function handleSubmit(e) {
     source:   'nativescreens.com',
   };
   try {
-    await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify(payload),
-    });
+    const fd = new FormData();
+    Object.entries(payload).forEach(([k, v]) => fd.append(k, v));
+    navigator.sendBeacon(WEBHOOK_URL, fd);
   } catch (_) {}
   e.target.reset();
   alert("Thank you! We'll call to schedule your free assessment within 1 business day.");
