@@ -156,9 +156,10 @@ ul { list-style: none; }
   margin-left: auto;
 }
 .nav-links a {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--charcoal);
+  color: #fff;
   transition: color 0.15s;
 }
 .nav-links a:hover { color: var(--teal); }
