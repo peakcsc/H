@@ -1313,3 +1313,26 @@ ul { list-style: none; }
     display: inline-block;
   }
 }
+
+/* ─── Form call CTA + mobile nav phone hide ─── */
+.form-or {
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.6rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.btn-call-alt {
+  background: var(--green);
+  color: #fff;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+.btn-call-alt:hover { background: var(--green-dark); color: #fff; }
+
+@media (max-width: 640px) {
+  .nav-phone { display: none; }
+}
